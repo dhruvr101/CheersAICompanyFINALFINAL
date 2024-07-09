@@ -58,6 +58,13 @@
   background: var(--btn-primary-bg);
 }
 
+.gradient-text {
+  background: linear-gradient(to right, #9c4eff, #6a00ff); /* Adjusted purple gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 @media only screen and (max-width: 992px) {
   .hero__content h2 {
     font-size: 1.8rem;
@@ -67,12 +74,12 @@
 
 @media only screen and (max-width: 768px) {
   .hero__content h2 {
-    font-style: 1.5rem;
+    font-size: 1.5rem;
     line-height: 45px;
   }
 
   .hero__content {
-    font-style: 0.9rem;
+    font-size: 0.9rem;
   }
 
   .primary__btn,

@@ -1,25 +1,7 @@
+// About.jsx
+
 import React from "react";
 import "../styles/about.css";
-
-import aboutImg from "../../components/images/about-us.jpg";
-
-const chooseData = [
-  {
-    icon: "ri-wifi-line",
-    title: "First working process",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos  modi cum repellat saepe nulla deleniti quia tempore vero corporis porro!",
-  },
-  {
-    icon: "ri-team-line",
-    title: "Dedicated team",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos  modi cum repellat saepe nulla deleniti quia tempore vero corporis porro!",
-  },
-  {
-    icon: "ri-customer-service-2-line",
-    title: "24/7 Hours support",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos  modi cum repellat saepe nulla deleniti quia tempore vero corporis porro!",
-  },
-];
 
 const About = () => {
   return (
@@ -27,31 +9,39 @@ const About = () => {
       <div className="container">
         <div className="about__wrapper">
           <div className="about__content">
-            <h6 className="subtitle">Why choose us</h6>
-            <h2>Specialist in aviding clients on</h2>
-            <h2 className="highlight">financial challenges</h2>
-            <p className="description about__content-desc">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Praesentium eum minus distinctio. Ipsam ab corrupti in perferendis
-              corporis repudiandae pariatur quas, ullam assumenda vel ipsa eaque
-              minima id earum perspiciatis.
+            <h2>About CheersAI</h2>
+            <p>
+              Hey! We're a team passionate about mental health and technology. Here’s our story:
             </p>
-            <div className="choose__item-wrapper">
-              {chooseData.map((item, index) => (
-                <div className="choose__us-item" key={index}>
-                  <span className="choose__us-icon">
-                    <i class={item.icon}></i>
-                  </span>
-                  <div>
-                    <h4 className="choose__us-title">{item.title}</h4>
-                    <p className="description">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="about__img">
-            <img src={aboutImg} alt="about us image" />
+
+            <h3>Our Story</h3>
+            <p>
+              We saw people close to us struggling with anxiety and lacking support. So, we created CheersAI: a free, accessible, and user-friendly mental health platform.
+            </p>
+
+            <h3>Our AI Therapist</h3>
+            <p>
+              Our AI therapist offers 24/7 support. You can chat and call with it, and it remembers everything about you, providing personalized care whenever you need it.
+            </p>
+
+            <h3>Our Motto</h3>
+            <p>
+              Our motto, "Made for those that struggle," reflects our commitment to inclusivity. Everyone deserves access to mental health resources, regardless of gender, religion, race, or ethnicity. CheersAI will always be free, forever.
+            </p>
+
+            <h3>Our Mission</h3>
+            <p>
+              Our true mission is to make an impact. That’s why we started CheersAI and why we’ll continue to innovate. Every signup helps us move closer to that goal.
+            </p>
+
+            <p>
+              If you have ideas, feedback, or just want to chat, email us, connect on LinkedIn, or visit our portfolio.
+            </p>
+
+            <p>
+              Thank you,<br />
+              The CheersAI Team
+            </p>
           </div>
         </div>
       </div>

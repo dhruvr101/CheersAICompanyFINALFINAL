@@ -6,23 +6,24 @@ import lightImg from "../../components/images/light-hero-bg.jpg";
 
 const Hero = ({ theme }) => {
   return (
-    <section className="'hero__section" id="home">
+    <section className="hero__section" id="home">
       <div className="container">
         <div className="hero__wrapper">
           <div className="hero__content">
             <div>
-              <h2>We 're Creating Perfect</h2>
-              <h2>Digital Products To</h2>
-              <h2 className="highlight">Promote Your Brand</h2>
+              <h2>Introducing</h2>
+              <h2></h2>
+              <h2 className="highlight">Next-Gen Therapy</h2>
             </div>
             <p className="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-              quis optio reprehenderit. Officiis, adipisci iusto!
+              Chat and Call with an AI Therapist that <span className="gradient-text">remembers you</span>.
+              <br />
+              24/7 <span className="gradient-text">Personalized</span> and <span className="gradient-text">Science-backed</span> support.
             </p>
 
             <div className="hero__btns">
-              <button className="primary__btn">Get Started Now</button>
-              <button className="secondary__btn">Discover More</button>
+              <button className="primary__btn">Get Started For Free</button>
+             
             </div>
           </div>
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import "./App.css";
-import Footer from "./components/Footer/Footer";
+//import Footer from "./components/Footer/Footer";
 
 import Header from "./components/Header/Header";
 import About from "./components/UI/About";
@@ -29,13 +29,12 @@ function App() {
       <Header theme={theme} toggleTheme={toggleTheme} />
       <Hero theme={theme} />
       <Counter />
-      <Services />
-      <About />
-      <Team />
-      <Blog />
+      
+      
+     
+     
       <Testimonials />
-      <Newsletter />
-      <Footer />
+    
     </>
   );
 }
