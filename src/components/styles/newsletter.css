@@ -1,7 +1,7 @@
-/* NEWSLETTER */
-
+/* Newsletter Section */
 .newsletter {
   background: var(--newsletter-bg);
+  padding: 4rem 0;
 }
 
 .newsletter__wrapper {
@@ -10,9 +10,29 @@
   justify-content: space-between;
 }
 
-.newsletter__content,
+.newsletter__content {
+  width: 50%;
+}
+
+.newsletter__content h6 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter__content h2 {
+  font-size: 2.5rem;
+  line-height: 1.4;
+}
+
+.newsletter__content .highlight {
+  color: var(--primary-color);
+}
+
 .newsletter__form {
   width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .newsletter__form input {
@@ -20,54 +40,37 @@
   border: none;
   outline: none;
   font-size: 1rem;
-  cursor: pointer;
 }
 
-.newsletter__form {
-  padding: 0.4rem 1rem;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 0.5rem;
-}
-
-.light-theme .newsletter {
-  background: linear-gradient(
-    180deg,
-    rgba(189, 243, 255, 1) 29%,
-    rgba(193, 243, 255, 1) 50%,
-    rgba(226, 250, 255, 1) 78%
-  );
-}
-
-.light-theme .subsctibe__btn {
+.subscribe__btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
   background: var(--primary-color);
   color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-@media only screen and (max-width: 992px) {
-  .newsletter__content h2 {
-    flex-wrap: wrap;
-  }
+.subscribe__btn:hover {
+  background: var(--primary-color-hover);
 }
 
-@media only screen and (max-width: 768px) {
-  .newsletter__wrapper {
-    flex-wrap: wrap;
-  }
-
-  .newsletter__content,
-  .newsletter__form {
-    width: 100%;
-  }
-
-  .newsletter__content {
-    margin-bottom: 30px;
-  }
-
-  .newsletter__form input {
-    padding: 8px 20px;
-    font-size: 0.9rem;
-  }
+/* Popup Message */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  z-index: 1000;
 }
+
+.popup p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+

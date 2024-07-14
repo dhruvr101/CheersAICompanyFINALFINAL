@@ -1,22 +1,23 @@
 import React, { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./header.css";
 
 const nav__links = [
   {
-    path: "#home",
+    path: "/",
     display: "Home",
   },
   {
-    path: "#about",
+    path: "/about",
     display: "About",
   },
   {
-    path: "#get-started",
+    path: "/get-started",
     display: "Get Started",
   },
 ];
 
-const Header = ({ theme, toggleTheme }) => {
+const Header = () => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
 
@@ -33,20 +34,10 @@ const Header = ({ theme, toggleTheme }) => {
     return () => window.removeEventListener("scroll", headerFunc);
   }, []);
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    const targetAttr = e.target.getAttribute("href");
-    const location = document.querySelector(targetAttr).offsetTop;
-    window.scrollTo({
-      left: 0,
-      top: location - 80,
-    });
-  };
-
   const toggleMenu = () => menuRef.current.classList.toggle("menu__active");
 
   return (
-    <header className={`header ${theme}`} ref={headerRef}>
+    <header className="header" ref={headerRef}>
       <div className="container">
         <div className="nav__wrapper">
           <div className="logo">
@@ -56,25 +47,12 @@ const Header = ({ theme, toggleTheme }) => {
             <ul className="menu">
               {nav__links.map((item, index) => (
                 <li className="menu__item" key={index}>
-                  <a href={item.path} onClick={handleClick} className="menu__link">
+                  <Link to={item.path} className="menu__link">
                     {item.display}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="light__mode">
-            <span onClick={toggleTheme}>
-              {theme === "light-theme" ? (
-                <span>
-                  <i className="ri-moon-line"></i>Dark
-                </span>
-              ) : (
-                <span>
-                  <i className="ri-sun-line"></i>Light
-                </span>
-              )}
-            </span>
           </div>
           <span className="mobile__menu" onClick={toggleMenu}>
             <i className="ri-menu-line"></i>

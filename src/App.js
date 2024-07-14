@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
-//import Footer from "./components/Footer/Footer";
-
 import Header from "./components/Header/Header";
 import About from "./components/UI/About";
 import Blog from "./components/UI/Blog";
@@ -14,10 +13,10 @@ import Team from "./components/UI/Team";
 import Testimonials from "./components/UI/Testimonials";
 
 function App() {
-  const [theme, setTheme] = useState("");
+  const [theme, setTheme] = useState("light-theme");
 
   const toggleTheme = () => {
-    theme === "" ? setTheme("light-theme") : setTheme("");
+    setTheme(prevTheme => prevTheme === "light-theme" ? "" : "light-theme");
   };
 
   useEffect(() => {
@@ -25,17 +24,20 @@ function App() {
   }, [theme]);
 
   return (
-    <>
+    <Router>
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <Hero theme={theme} />
-      <Counter />
-      
-      
-     
-     
-      <Testimonials />
-    
-    </>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Hero theme={theme} />
+            <Counter />
+            <Testimonials />
+          </>
+        } />
+        <Route path="/about" element={<About />} />
+        {/* Add other routes here */}
+      </Routes>
+    </Router>
   );
 }
 

@@ -4,12 +4,12 @@ import "../styles/counter.css";
 
 const counterData = [
   {
-    number: "4k",
+    number: "3k",
     text: "Users",
   },
   {
-    number: "$3000",
-    text: "Funded",
+    number: "10+",
+    text: "Coutries Reached",
   },
   {
     number: "10k",
