@@ -12,6 +12,10 @@ const nav__links = [
     display: "About",
   },
   {
+    path: "/contact",
+    display: "Contact",
+  },
+  {
     path: "/get-started",
     display: "Get Started",
   },
