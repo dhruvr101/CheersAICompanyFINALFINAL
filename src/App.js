@@ -11,6 +11,7 @@ import Newsletter from "./components/UI/Newsletter";
 import Services from "./components/UI/Services";
 import Team from "./components/UI/Team";
 import Testimonials from "./components/UI/Testimonials";
+import Footer from "./components/Footer/Footer"; // Updated path
 
 function App() {
   const [theme, setTheme] = useState("light-theme");
@@ -37,6 +38,7 @@ function App() {
         <Route path="/about" element={<About />} />
         {/* Add other routes here */}
       </Routes>
+      <Footer /> {/* Add Footer component */}
     </Router>
   );
 }
